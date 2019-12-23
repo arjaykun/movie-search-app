@@ -1,13 +1,169 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+body {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.app-header, .app-footer {
+	text-align: center;
+	background-color: #333;
+	color: #fff;
+	padding: 20px
+}
+
+.app-container {
+	width: 90%;
+	margin: auto;
+	margin-top: 10px;
+
+}
+
+.search-form {
+	text-align: center;
+	padding: 10px 0;
+}
+
+.input-search {
+	width: 33%;
+	padding: 5px 15px;
+	border: 1px solid #ccc;
+	border-radius: 16px 0 0 16px
+}
+
+.btn-search {
+	padding: 5px 15px;
+	background-color: #4caf50;
+	color: #fff;
+	border: 0;
+	border-radius: 0 16px 16px 0;
+}
+
+.movie-box {
+	width: 300px;
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	background-color: #f7f7f7;
+}
+
+.movie-box:hover {
+	background-color: #333;
+	color:#fff;
+}
+
+.movie-poster {
+	width: 100%;
+	max-height: 350px;
+}
+
+.movie-title {
+	text-align: center;
+	text-decoration: none;
+	color:#333;
+}
+
+.movies-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;	
+	margin: 10px 0 30px 0;
+}
+
+.pagination-link {
+	border: 1px solid #ccc;
+	padding: 5px 15px;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+}
+
+.movie-detail {
+	width: 80%;
+	margin:auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.movie-fetch-poster {
+	width: 100%;
+	height: 300px;
+	font-family: Arial;
+}
+
+.movie-info {
+	text-align:center;
+	width: 70%;
+}
+
+.movie-header {
+	width: 30%;
+	padding: 0 25px 0 5px;
+}
+
+.movie-plot {
+	background-color: #ccc;
+	padding: 15px;
+	border: 1px solid #333;
+}
+
+/*media queries here*/
+/*mobile view*/
+@media only screen and (max-width:768px) {
+	.movie-box {
+		width: 150px;
+		height: 270px;
+		max-height: 270px
+	}
+	.movie-title {
+		font-size: 0.7em
+	}
+	.app-container {
+		width: 98%;
+	}
+	.app-header h1, .app-footer h1 {
+		font-size: 1.2em;
+	}
+	.movie-detail {
+		width: 98%;
+	}
+	.movie-header {
+		width: 98%;
+	}
+}
+
+/*tablet view*/
+@media only screen and (min-width: 768px) {
+	.movie-detail {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.movie-header{
+		width: 50%
+	}
+}
+
+@media only screen and (min-width: 1080px) {
+	.movie-detail {
+		flex-direction: row;
+	}
+	.movie-header {
+		width: 30%;
+	}
 }
