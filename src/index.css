@@ -52,8 +52,7 @@ body {
 }
 
 .movie-box:hover {
-	background-color: #333;
-	color:#fff;
+	box-shadow: 0 0 3px 1px #ccc;
 }
 
 .movie-poster {
